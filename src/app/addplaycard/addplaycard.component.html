@@ -1,0 +1,28 @@
+<div class="box-5">
+    <h1 style="text-align: center; color: red;">ADD PLAYCARD</h1>
+    <table class="table text-light">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Offer</th>
+
+                <th scope="col">Update</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">#</th>
+                <td><input type="text" placeholder="Enter Playcard Name" #pname></td>
+                <td><input type="text" placeholder="Enter Price" #pprice></td>
+                <td><input type="text" placeholder="Enter Offer" #poffer></td>
+                <td><button class="btn btn-primary"
+                        (click)="saveplaycard(pname.value,pprice.value,poffer.value)">Save</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="box-1">
+        <h1 style="text-align: center; color: yellow;">PLAY CARDS</h1>
+        <hr>
+        <div class="cardcontent" style="margin: 0 20px;">
+            <table class="table text-light">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Offer</th>
+                        <th scope="col">Delete</th>
+                        <th scope="col">Update</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ele of playcards">
+                        <th scope="row">{{ele.id}}</th>
+                        <td>{{ele.name}}</td>
+                        <td>{{ele.price}}</td>
+                        <td><input type="text" placeholder="{{ele.offer}}" #poffer1></td>
+                        <td><button class="btn btn-danger" (click)="deletepc(ele.id)">Delete</button></td>
+                        <td><button class="btn btn-primary" (click)="updatepc(ele.id,poffer1.value)">Update</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+

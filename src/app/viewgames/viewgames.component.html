@@ -1,0 +1,34 @@
+<div class="box-2">
+    <h1 style="text-align: center; color: red;">AVAILABLE GAMES</h1>
+    <hr>
+    <div class="gamecontent" style="margin: 0 20px;">
+        <table class="table text-light">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Level</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Update</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ele of games">
+                    <th scope="row">{{ele.id}}</th>
+                    <td><input type="text" placeholder="{{ele.name}}" #gname1></td>
+                    <td><img src="{{ele.imageurl}}" alt="image.jpg" style="width: 200px; height: 200px;"></td>
+                    <td>{{ele.createdby}}</td>
+                    <td><button class="btn btn-danger" (click)="deletegame(ele.id)">Delete</button></td>
+                    <td><button class="btn btn-warning"
+                            (click)="updategame(ele.id,gname1.value)">Update</button></td>
+
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

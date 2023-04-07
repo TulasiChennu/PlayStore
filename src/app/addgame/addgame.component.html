@@ -1,0 +1,31 @@
+<div class="box-4">
+    <h1 style="text-align: center; color: red;">ADD GAME TO DATABASE</h1>
+    <table class="table text-light">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">ImageUrl</th>
+                <th scope="col">createdby</th>
+                <th scope="col">level</th>
+                <th scope="col">Update</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">#</th>
+                <td><input type="text" placeholder="Enter Game Name" #gname></td>
+                <td><input type="text" placeholder="Enter Imageurl" #gimage></td>
+                <td><input type="text" placeholder="Enter Creattedby" #gcreated></td>
+                <td><input type="text" placeholder="Enter Level" #glevel></td>
+                <td><button class="btn btn-primary"
+                        (click)="savegame(gname.value,gimage.value,gcreated.value,glevel.value)">Save</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>

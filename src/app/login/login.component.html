@@ -1,0 +1,41 @@
+
+
+
+<div>
+        <table align="center" border="3px solid black">
+        
+            <app-header></app-header>
+            <div class="center" *ngIf="! isLoggedin()">
+                <h1 B>LOGIN</h1>
+             
+                <form class="log" #loginref="ngForm" (ngSubmit)="login()">
+        
+                    <div class="txt_field">
+                        <input type="email" [(ngModel)]="user.email" name="username" #username="ngModel" required [class.is-invalid]="username.invalid && username.touched">
+                        <small class="text-danger" [class.d-none]="username.valid || username.untouched">*username is
+                            Required</small>
+                        <span></span>
+                        <label>Email</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required [class.is-invalid]="password.invalid && password.touched">
+                        <small class="text-danger" [class.d-none]="password.valid || password.untouched">*password is
+                            Required</small>
+                        <span></span>
+                        <label>Password</label>
+                    </div>
+                    <div>
+        
+                        <button type="submit" class="button" (click)="login()">Submit</button>
+                    </div>
+                    Don't have PlayGame account? <a routerLink="/register" class="register">Register-Here</a> 
+                </form>
+            </div>
+            <div *ngIf="isLoggedin()" class="formbox">
+                <h1>Already Loggedin</h1>
+            </div>
+        
+    </table>
+</div>
+<br>
+  
